@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST["password"];
     }
 
+
     // Only proceed if there are no validation errors
     if (empty($emailErr) && empty($passwordErr)) {
         // Prepare the SQL statement to check if email exists in the login1 table
@@ -34,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check the user's role
                 if ($account_type == "1") {
                     // Redirect admin to the admin dashboard
-                    echo "<script>window.open('homeprofile.php','_self');</script>";
+                    echo "<script>window.open('homeprofile.php','_self');</script>"; 
 
                 } else if ($account_type == "2") {
                     // Redirect student to the student home page
