@@ -16,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = $_POST["password"];
     }
 
-
     // Only proceed if there are no validation errors
     if (empty($emailErr) && empty($passwordErr)) {
         // Prepare the SQL statement to check if email exists in the login1 table
@@ -27,16 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $db_password = $row["password"]; // Password from the database
+            $db_password = $row["password"]; // Hashed password from the database
             $account_type = $row["account_type"]; // Account type
 
-            // Directly compare the entered password with the password in the database
-            if ($password === $db_password) {
+            // Check if the entered password matches the hashed password in the database
+            if (password_verify($password, $db_password)) { // Use password_verify to check hashed password
                 // Check the user's role
                 if ($account_type == "1") {
                     // Redirect admin to the admin dashboard
-                    echo "<script>window.open('homeprofile.php','_self');</script>"; 
-
+                    echo "<script>window.location.href = 'homeprofile.php';</script>";
                 } else if ($account_type == "2") {
                     // Redirect student to the student home page
                     echo "<script>window.location.href = '../student/homeprofile.php';</script>";
@@ -83,6 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="remember" class="p1">Remember Me</label>
                 </center>
             </label>
+        </div>
+
+
+          
+           
         </div>
     </center>
 </body>

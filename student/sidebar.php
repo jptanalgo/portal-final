@@ -46,12 +46,12 @@
               </li>    
             <li class="logout-link">
             <span class="material-symbols-outlined">logout</span>
-            <a href="../php/splogin.php" "logout()">Log Out</a>
+            <a href="index.php" "logout()">Log Out</a>
       </div>
       <script>
           function logout() {
               alert('Logging out...');
-              window.location.href = '../splogin.php'; 
+              window.location.href = 'index.php'; 
           }
       </script>
           </li>
