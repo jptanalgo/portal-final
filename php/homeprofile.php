@@ -11,6 +11,7 @@
 <?php include('sidebar.php'); ?>  
       
 
+
     <div class="container">
         <h1>Student Profile</h1>
         <form action="process_profile.php" method="POST">

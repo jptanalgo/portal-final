@@ -33,6 +33,7 @@
             <input type="text" id="student-no" placeholder="Enter Student Number" required>
         </div>
         
+        
         <div class="form-group">
             <label>Miscellaneous Fee:</label>
             <img id="fee-image" src="../misc.jpg" alt="Miscellaneous Fee" style="max-width: 100%; margin: 10px 0;">

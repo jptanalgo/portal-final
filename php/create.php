@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $Username = $_POST["Username"];
     }
 
+    
     // Password validation
     if (empty($_POST["Password"])) {
         $PasswordErr = "Password is required!";

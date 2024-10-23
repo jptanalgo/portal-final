@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+
 // Handle deletion
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];

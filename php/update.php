@@ -72,6 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    
     // Check if there are no validation errors
     if (empty($UsernameErr) && empty($EmailErr) && empty($AgeErr) && empty($PasswordErr) && empty($ConfirmPasswordErr)) {
         // If passwords are provided, update them; otherwise, skip password change

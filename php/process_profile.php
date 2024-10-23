@@ -42,6 +42,7 @@ $student = [
                 <div id="email"><?php echo htmlspecialchars($student['email']); ?></div>
             </div>
 
+            
             <div class="form-group">
                 <label>Mobile Number:</label>
                 <div id="mobile"><?php echo htmlspecialchars($student['mobile']); ?></div>

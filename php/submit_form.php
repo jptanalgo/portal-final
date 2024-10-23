@@ -14,3 +14,4 @@ $username = $data['username'];
 // Return a response
 echo json_encode(['success' => true]);
 ?>
+

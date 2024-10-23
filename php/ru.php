@@ -53,6 +53,7 @@
             <button onclick="nextStep()">Next</button>
         </div>
 
+        
         <div class="form-step">
             <label>Username:</label>
             <input type="text" placeholder="Username">

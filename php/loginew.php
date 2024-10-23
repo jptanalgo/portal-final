@@ -30,6 +30,7 @@
                 <button class="next-button">Next</button>
             </div>
 
+            
             <!-- Step 2: OTP -->
             <div class="form-step">
                 <h1>Enter the OTP</h1>
