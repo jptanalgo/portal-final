@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check the user's role
                 if ($account_type == "1") {
                     // Redirect admin to the admin dashboard
-                    echo "<script>window.location.href = 'homeprofile.php';</script>";
+                    echo "<script>window.location.href = 'php/homeprofile.php';</script>";
                 } else if ($account_type == "2") {
                     // Redirect student to the student home page
                     echo "<script>window.location.href = '../student/homeprofile.php';</script>";
